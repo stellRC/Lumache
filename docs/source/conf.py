@@ -30,6 +30,8 @@ extensions = ['sphinx.ext.duration',
 templates_path = ['_templates']
 exclude_patterns = []
 
+dependencies=["accessible-pygments"]
+
 
 
 # -- Options for HTML output -------------------------------------------------
