@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="prev" title="Welcome to Lumache’s documentation!" href="index.html">
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="API" href="api.html"><link rel="prev" title="Welcome to Lumache’s documentation!" href="index.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
         <title>Usage - Lumache 0.1 documentation</title>
@@ -192,6 +192,10 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Usage</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/lumache.html">lumache</a></li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -241,9 +245,6 @@
 </section>
 <section id="creating-recipes">
 <h2>Creating recipes<a class="headerlink" href="#creating-recipes" title="Link to this heading">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">kind</span></code> parameter should be either <code class="docutils literal notranslate"><span class="pre">&quot;meat&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;fish&quot;</span></code>,
-or <code class="docutils literal notranslate"><span class="pre">&quot;veggies&quot;</span></code>. Otherwise, <a class="reference internal" href="#lumache.get_random_ingredients" title="lumache.get_random_ingredients"><code class="xref py py-func docutils literal notranslate"><span class="pre">lumache.get_random_ingredients()</span></code></a>
-will raise an exception.</p>
 <p>To retrieve a list of random ingredients,
 you can use the <code class="docutils literal notranslate"><span class="pre">lumache.get_random_ingredients()</span></code> function:</p>
 <dl class="py function">
@@ -266,6 +267,9 @@ you can use the <code class="docutils literal notranslate"><span class="pre">lum
 </dl>
 </dd></dl>
 
+<p>The <code class="docutils literal notranslate"><span class="pre">kind</span></code> parameter should be either <code class="docutils literal notranslate"><span class="pre">&quot;meat&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;fish&quot;</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">&quot;veggies&quot;</span></code>. Otherwise, <a class="reference internal" href="#lumache.get_random_ingredients" title="lumache.get_random_ingredients"><code class="xref py py-func docutils literal notranslate"><span class="pre">lumache.get_random_ingredients()</span></code></a>
+will raise an exception.</p>
 <dl class="py exception">
 <dt class="sig sig-object py" id="lumache.InvalidKindError">
 <em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">lumache.</span></span><span class="sig-name descname"><span class="pre">InvalidKindError</span></span><a class="headerlink" href="#lumache.InvalidKindError" title="Link to this definition">¶</a></dt>
@@ -285,7 +289,15 @@ you can use the <code class="docutils literal notranslate"><span class="pre">lum
       <footer>
         
         <div class="related-pages">
-          
+          <a class="next-page" href="api.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">API</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
           <a class="prev-page" href="index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
@@ -330,8 +342,8 @@ you can use the <code class="docutils literal notranslate"><span class="pre">lum
 <li><a class="reference internal" href="#">Usage</a><ul>
 <li><a class="reference internal" href="#installation">Installation</a></li>
 <li><a class="reference internal" href="#creating-recipes">Creating recipes</a><ul>
-<li><a class="reference internal" href="#lumache.get_random_ingredients"><code class="docutils literal notranslate"><span class="pre">lumache.get_random_ingredients()</span></code></a></li>
-<li><a class="reference internal" href="#lumache.InvalidKindError"><code class="docutils literal notranslate"><span class="pre">lumache.InvalidKindError</span></code></a></li>
+<li><a class="reference internal" href="#lumache.get_random_ingredients"><code class="docutils literal notranslate"><span class="pre">get_random_ingredients()</span></code></a></li>
+<li><a class="reference internal" href="#lumache.InvalidKindError"><code class="docutils literal notranslate"><span class="pre">InvalidKindError</span></code></a></li>
 </ul>
 </li>
 </ul>
