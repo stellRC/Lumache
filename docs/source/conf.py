@@ -39,6 +39,9 @@ exclude_patterns = []
 html_theme = "furo"
 html_static_path = ['_static']
 
+pygments_style = "a11y-light"
+pygments_dark_style = "a11y-dark"
+
 # EPUB options
 epub_show_urls = 'footnote'
 
