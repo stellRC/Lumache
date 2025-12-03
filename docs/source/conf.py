@@ -1,6 +1,5 @@
 """Module providing a function printing python version."""
 # Configuration file for the Sphinx documentation builder.
-
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here.
 
