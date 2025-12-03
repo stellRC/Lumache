@@ -1,11 +1,13 @@
+"""Module providing a function printing python version."""
 # Configuration file for the Sphinx documentation builder.
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here.
+
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-#
+
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
