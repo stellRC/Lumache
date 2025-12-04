@@ -14,13 +14,17 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.14.1"
+          python-version: "3.13" # Changed to stable version
       - name: Upgrade pip and install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r docs/requirements.txt
+          pip install sphinx  # Make sure sphinx is installed
       - name: Build HTML
         uses: ammaraskar/sphinx-action@master
+        with:
+          pre-build-command: "" # Disable default pre-build
+          build-command: "sphinx-build docs/source docs/build/html" # Explicit build
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
