@@ -39,7 +39,7 @@ This avoids Python version mismatching if newer sphinx themes and dependencies a
     - name: Set up Python
         uses: actions/setup-python@v5
         with:
-            python-version: "3.13"
+            python-version: "3.14"
     - name: Install dependencies and build docs
         run: |
             pip install --upgrade pip
