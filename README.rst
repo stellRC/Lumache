@@ -46,3 +46,25 @@ This avoids Python version mismatching if newer sphinx themes and dependencies a
             pip install -r ./docs/requirements.txt
             # Build the documentation directly
             sphinx-build docs/source docs/build/html
+
+The Sphinx extension for github pages should be included in ``conf.py``. 
+Doing so creates a ``.nojekyll`` when pushed, allowing for the use of Sphinx themes.
+
+.. code-block:: python
+
+    extensions = ['sphinx.ext.duration',
+                'sphinx.ext.doctest',
+                'sphinx.ext.autodoc',
+                'sphinx.ext.autosummary',
+                'sphinx.ext.githubpages',]
+
+``Pygments`` is a syntax highlighter included in the theme ``Furo``.
+In order to access ``accessible-pygments``, both the desired style and 
+the dependency should be added to the ``conf.py`` file.
+
+.. code-block:: python
+    
+    dependencies=["accessible-pygments"]
+    pygments_style = "a11y-light"
+    pygments_dark_style = "a11y-dark"
+
