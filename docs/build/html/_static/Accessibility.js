@@ -43,7 +43,7 @@ ContrastSVG = `<svg fill="var(--pst-color-text-muted)" version="1.1" id="Capa_1"
 
 document.addEventListener("DOMContentLoaded", () => {
   // Create the menu
-  const headerEnd = document.querySelector(".content-icon-container");
+  const headerEnd = document.querySelector(".navbar-header-items__end");
   if (headerEnd) {
     const button = document.createElement("div");
     button.id = "AcccessibilityMenu";
