@@ -52,13 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         ${AccessibilitySVG}
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href="#" class="btn btn-sm dropdown-item" data-action="toggleFont">
+                        <li><a href="#" class="btn btn-sm dropdown-item btn-acc" data-action="toggleFont">
                             <span class="btn__icon-container">
                                 ${FontSVG}
                             </span>
                             <span id="fontText" class="btn__text-container">${enableFont} <span style="font-family: OpenDyslexic">OpenDyslexic</span></span>
                         </a></li>
-                        <li><a href="#" class="btn btn-sm dropdown-item" data-action="toggleContrast">
+                        <li><a href="#" class="btn btn-sm dropdown-item btn-acc" data-action="toggleContrast">
                             <span class="btn__icon-container">
                                 ${ContrastSVG}
                             </span>

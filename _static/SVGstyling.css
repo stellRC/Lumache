@@ -1,22 +1,29 @@
 /* Size the main accessibility button SVG 20% larger */
 #AcccessibilityMenu .dropdown-toggle svg {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--color-foreground-primary);
 }
 
 /* Hover effects for accessibility menu SVG icons */
 #AcccessibilityMenu .btn:hover svg path {
-  stroke: var(--color-foreground-primary) !important;
+  /* stroke: var(--color-foreground-primary) !important; */
+  stroke: var(--color-link--hover);
   /* fill: var(--pst-color-text-base) !important; */
 }
 
 /* Hover effects for dropdown items */
 #AcccessibilityMenu .dropdown-item:hover svg path {
-  stroke: var(--color-foreground-primary) !important;
-  fill: var(--color-foreground-primary) !important;
+  /* stroke: var(--color-foreground-primary) !important;
+  fill: var(--color-foreground-primary) !important; */
+  stroke: var(--color-link--hover);
+  fill: var(--color-link--hover);
 }
 
 #AcccessibilityMenu .dropdown-item:hover svg {
   fill: var(--color-foreground-primary) !important;
+  fill: var(--color-link--hover);
 }
 
 .dropdown-menu {
@@ -27,6 +34,6 @@
   width: 5rem;
 }
 
-.btn_text-container {
+.btn__text-container {
   display: none;
 }
