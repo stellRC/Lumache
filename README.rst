@@ -9,7 +9,8 @@ creates recipes mixing random ingredients.
 Integrate Sphinx with Github pages
 ===================================
 
-Update theme to desired version in ``required.txt``
+Update theme and other third-party extension versions in ``required.txt`` to
+avoid issues when rebuilding. 
 
 .. code-block:: txt
 
@@ -22,8 +23,9 @@ Then install the requirements for the theme via the command line:
     pip install -r requirements.txt
    
 Ensure versions of python and pip are up-to-date. 
-If the venv (virtual environment) is built in an earlier version,
-this might cause a version mismatch and a failure to activate the variables
+If the Python virtual environment is built in an earlier version,
+this might cause failure to activate environment variables, leading 
+to possible errors integrating with sphinx and third-party extensions.
 
 .. code-block:: txt
 
