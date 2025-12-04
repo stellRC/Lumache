@@ -9,11 +9,16 @@
   border: none;
 }
 
+.dropdown-toggle {
+  background-color: transparent;
+}
+
 /* Hover effects for accessibility menu SVG icons */
 #AcccessibilityMenu .btn:hover svg path {
   /* stroke: var(--color-foreground-primary) !important; */
   stroke: var(--color-link--hover);
   /* fill: var(--pst-color-text-base) !important; */
+  /* fill: var(--color-link--hover); */
 }
 
 /* Hover effects for dropdown items */
