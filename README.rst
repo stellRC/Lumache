@@ -63,7 +63,7 @@ In order to access ``accessible-pygments``, both the desired style and
 the dependency should be added to the ``conf.py`` file.
 
 .. code-block:: python
-    
+
     dependencies=["accessible-pygments"]
     pygments_style = "a11y-light"
     pygments_dark_style = "a11y-dark"
