@@ -1,3 +1,9 @@
+.dropdown-toggle {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
 /* Size the main accessibility button SVG 20% larger */
 #AcccessibilityMenu .dropdown-toggle svg {
   /* transform: scale(1.1); */
@@ -5,21 +11,17 @@
   height: 1.25rem;
 }
 #AcccessibilityMenu .dropdown-toggle svg path {
-  stroke: var(--color-foreground-primary);
+  /* stroke: var(--currentcolor); */
   /* fill: var(--color-foreground-primary); */
   opacity: 0.8;
-}
-
-.dropdown-toggle {
-  background-color: transparent;
-  outline: none;
-  border: none;
 }
 
 /* Hover effects for accessibility menu SVG icons */
 #AcccessibilityMenu .btn:hover svg path {
   /* stroke: var(--color-foreground-primary) !important; */
-  stroke: var(--color-link--hover);
+  /* stroke: var(--color-link--hover); */
+  stroke: var(--pst-color-secondary);
+  fill: var(--pst-color-secondary);
   /* fill: var(--pst-color-text-base) !important; */
   /* fill: var(--color-link--hover); */
 }
@@ -28,12 +30,15 @@
 #AcccessibilityMenu .dropdown-item:hover svg path {
   /* stroke: var(--color-foreground-primary) !important;
   fill: var(--color-foreground-primary) !important; */
-  stroke: var(--color-link--hover);
-  fill: var(--color-link--hover);
+  /* stroke: var(--color-link--hover);
+  fill: var(--color-link--hover); */
+  stroke: var(--pst-color-secondary);
+  fill: var(--pst-color-secondary);
 }
 
 #AcccessibilityMenu .dropdown-item:hover svg {
-  fill: var(--color-link--hover);
+  /* fill: var(--color-link--hover); */
+  fill: var(--pst-color-secondary);
 }
 
 #AcccessibilityMenu,

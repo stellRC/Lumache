@@ -1,9 +1,9 @@
-AccessibilitySVG = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+AccessibilitySVG = `<svg class="svg-inline--fa fa-sun theme-switch fa-lg" data-mode="light" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="var(--pst-color-text-muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M7 9L12 10M17 9L12 10M12 10V13M12 13L10 18M12 13L14 18" stroke="var(--pst-color-text-muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 7C11.7239 7 11.5 6.77614 11.5 6.5C11.5 6.22386 11.7239 6 12 6C12.2761 6 12.5 6.22386 12.5 6.5C12.5 6.77614 12.2761 7 12 7Z" fill="var(--pst-color-text-muted)" stroke="var(--pst-color-text-muted)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`;
-FontSVG = `<svg fill="var(--pst-color-text-muted)" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+FontSVG = `<svg svg class="svg-inline--fa fa-sun theme-switch fa-lg" data-mode="light" fill="var(--pst-color-text-muted)" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 392.619 392.619" xml:space="preserve">
 <g>
 	<path d="M310.724,0.929H81.896C36.738,0.929,0,37.667,0,82.825v226.97c0,45.158,36.738,81.896,81.896,81.896h228.828
@@ -24,7 +24,7 @@ FontSVG = `<svg fill="var(--pst-color-text-muted)" version="1.1" id="Capa_1" xml
 		c2.396-2.396,2.396-6.281,0-8.677L306.783,174.973z"/>
 </g>
 </svg>`;
-ContrastSVG = `<svg fill="var(--pst-color-text-muted)" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ContrastSVG = `<svg svg class="svg-inline--fa fa-sun theme-switch fa-lg" data-mode="light" fill="var(--pst-color-text-muted)" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 211 211" xml:space="preserve">
 <g>
 	<path d="M121,24.35V0H91v24.298c5-0.888,9.782-1.377,14.857-1.377C111.032,22.922,117,23.426,121,24.35z"/>
