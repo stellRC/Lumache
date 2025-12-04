@@ -15,16 +15,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-      - name: Upgrade pip and install dependencies
+      - name: Install dependencies and build docs
         run: |
           pip install --upgrade pip
           pip install -r ./docs/requirements.txt
-          # sphinx-build docs/source docs/build/html
-      - name: Build HTML
-        uses: ammaraskar/sphinx-action@master
-        with:
-          pre-build-command: "" # Disable default pre-build
-          build-command: "sphinx-build docs/source docs/build/html" # Explicit build
+          # Build the documentation directly
+          sphinx-build docs/source docs/build/html
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
