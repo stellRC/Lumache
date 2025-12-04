@@ -28,8 +28,8 @@ this might cause a version mismatch and a failure to activate the variables::
 Specify Python build version in ``sphinx.yml`` rather than using ``sphinx-action``
 This avoids Python version mismatching if newer sphinx themes and dependencies are used.
 
-.. code-block::
-    
+.. code-block::yaml
+
     - name: Set up Python
         uses: actions/setup-python@v5
         with:
