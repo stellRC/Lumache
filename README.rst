@@ -9,7 +9,9 @@ creates recipes mixing random ingredients.
 Integrate Sphinx with Github pages
 ===================================
 
-Update theme to desired version in ``required.txt``::
+Update theme to desired version in ``required.txt``
+
+.. code-block:: txt
 
     furo==2025.9.25
 
