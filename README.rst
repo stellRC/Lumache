@@ -14,7 +14,7 @@ avoid issues when rebuilding.
 
 .. code-block:: txt
 
-    furo==2025.9.25
+    pydata_sphinx_theme==0.16.1
 
 Then install the requirements for the theme via the command line:
 
@@ -58,7 +58,7 @@ Doing so creates a ``.nojekyll`` when pushed, allowing for the use of Sphinx the
                 'sphinx.ext.autosummary',
                 'sphinx.ext.githubpages',]
 
-``Pygments`` is a syntax highlighter included in the theme ``Furo``.
+``Pygments`` is a syntax highlighter required by the theme ``pydata_sphinx_theme``.
 In order to access ``accessible-pygments``, both the desired style and 
 the dependency should be added to the ``conf.py`` file.
 
