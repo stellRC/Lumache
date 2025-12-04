@@ -26,7 +26,7 @@ extensions = ['sphinx.ext.duration',
               'sphinx.ext.autodoc',
               'sphinx.ext.autosummary',
               'sphinx.ext.githubpages',
-              'spinx-accessibility',]
+              'sphinx-accessibility',]
 
 templates_path = ['_templates']
 exclude_patterns = []
