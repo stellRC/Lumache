@@ -14,11 +14,10 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.14" # Changed to stable version
+          python-version: "3.14"
       - name: Upgrade pip and install dependencies
         run: |
           pip install --upgrade pip
-          pip install .
           pip install -r ./docs/requirements.txt
           pip install sphinx
           sphinx-build docs ./docs/_build/html/
