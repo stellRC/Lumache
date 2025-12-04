@@ -37,3 +37,7 @@
 .btn__text-container {
   display: none;
 }
+
+.dropdown-item {
+  list-style: none;
+}
