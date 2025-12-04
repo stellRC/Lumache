@@ -4,45 +4,29 @@
   border: none;
 }
 
-/* Size the main accessibility button SVG 20% larger */
-#AcccessibilityMenu .dropdown-toggle svg {
-  /* transform: scale(1.1); */
-  width: 1.25rem;
-  height: 1.25rem;
-}
-#AcccessibilityMenu .dropdown-toggle svg path {
-  /* stroke: var(--currentcolor); */
-  /* fill: var(--color-foreground-primary); */
-  opacity: 0.8;
+#AcccessibilityMenu .dropdown-toggle svg,
+.dropdown-item svg {
+  --svg-size: 1.25rem;
+  width: var(--svg-size);
+  height: var(--svg-size);
 }
 
 /* Hover effects for accessibility menu SVG icons */
 #AcccessibilityMenu .btn:hover svg path {
-  /* stroke: var(--color-foreground-primary) !important; */
-  /* stroke: var(--color-link--hover); */
   stroke: var(--pst-color-secondary);
-  fill: var(--pst-color-secondary);
-  /* fill: var(--pst-color-text-base) !important; */
-  /* fill: var(--color-link--hover); */
 }
 
 /* Hover effects for dropdown items */
 #AcccessibilityMenu .dropdown-item:hover svg path {
-  /* stroke: var(--color-foreground-primary) !important;
-  fill: var(--color-foreground-primary) !important; */
-  /* stroke: var(--color-link--hover);
-  fill: var(--color-link--hover); */
   stroke: var(--pst-color-secondary);
   fill: var(--pst-color-secondary);
 }
 
 #AcccessibilityMenu .dropdown-item:hover svg {
-  /* fill: var(--color-link--hover); */
   fill: var(--pst-color-secondary);
 }
 
-#AcccessibilityMenu,
-.dropdown-menu {
+#AcccessibilityMenu {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -54,28 +38,23 @@
   gap: 0.5rem;
   padding: 0;
   margin: 0;
+  background-color: var(--pst-color-on-background) !important;
 }
 
 .btn__text-container {
-  display: none;
+  color: var(--pst-color-text-muted);
+}
+
+.btn__text-container:hover {
+  color: var(--pst-color-secondary);
 }
 
 .dropdown-menu li {
   list-style: none;
 }
 
-.dropdown-item svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  stroke: var(--color-foreground-primary);
-  fill: var(--color-foreground-primary);
-  opacity: 0.8;
-}
-
-.visible {
-  display: flex;
-}
-
-.hide {
-  display: none;
+@media (min-width: 960px) {
+  .col-lg-3 {
+    width: initial;
+  }
 }

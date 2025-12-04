@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         </a></li>
                     </ul>`;
 
-    headerEnd.prepend(button);
+    headerEnd.append(button);
   }
   // Load saved font and contrast preference next
   loadFontPreference();
@@ -77,8 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("AcccessibilityMenu")
     ?.addEventListener("click", (e) => {
       // Handle dropdown menu clicks
-      const dropdown = document.querySelector(".dropdown-menu");
-      dropdown.classList.toggle("visible");
       if (e.target.closest("[data-action]")) {
         const action = e.target
           .closest("[data-action]")
