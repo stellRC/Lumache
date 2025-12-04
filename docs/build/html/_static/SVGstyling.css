@@ -4,6 +4,9 @@
   width: 1.25rem;
   height: 1.25rem;
   color: var(--color-foreground-primary);
+  background-color: transparent;
+  outline: none;
+  border: none;
 }
 
 /* Hover effects for accessibility menu SVG icons */
@@ -27,11 +30,11 @@
 }
 
 .dropdown-menu {
-  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   width: 5rem;
+  display: none;
 }
 
 .btn__text-container {
@@ -40,4 +43,13 @@
 
 .dropdown-item {
   list-style: none;
+}
+
+.dropdown-item svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.visible {
+  display: flex;
 }
