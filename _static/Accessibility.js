@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ?.addEventListener("click", (e) => {
       // Handle dropdown menu clicks
       const dropdown = document.querySelector(".dropdown-menu");
-      dropdown.classList.toggle(".visible");
+      dropdown.classList.toggle("visible");
       if (e.target.closest("[data-action]")) {
         const action = e.target
           .closest("[data-action]")

@@ -11,6 +11,8 @@
 
 .dropdown-toggle {
   background-color: transparent;
+  outline: none;
+  border: none;
 }
 
 /* Hover effects for accessibility menu SVG icons */
