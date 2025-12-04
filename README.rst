@@ -44,9 +44,8 @@ This avoids Python version mismatching if newer sphinx themes and dependencies a
             python-version: "3.14"
     - name: Install dependencies and build docs
         run: |
-            pip install --upgrade pip
-            pip install -r ./docs/requirements.txt
-            # Build the documentation directly
+            .. pip install --upgrade pip
+            .. pip install -r ./docs/requirements.txt
             sphinx-build docs/source docs/build/html
 
 The Sphinx extension for github pages should be included in ``conf.py``. 
