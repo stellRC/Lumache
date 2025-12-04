@@ -10,17 +10,20 @@ Integrate Sphinx with Github pages
 ===================================
 
 Update theme to desired version in ``required.txt``
-.. code-block:: txt
+
+.. callout:: ①
     furo==2025.9.25
 
-.. code-block::txt
-    pip install -r requirements.txt
+Then install the requirements for the theme via the command line:
+
+``pip install -r requirements.txt``
+   
 
 Ensure versions of python and pip are up-to-date. 
 If the venv (virtual environment) is built in an earlier version,
 this might cause a version mismatch and a failure to activate the variables
 
-.. code-block:: txt
+.. callout:: ①
     python3.14.1 -m venv venv
     py -m venv .venv
     .venv\Scripts\activate
