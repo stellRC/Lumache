@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // Handle dropdown menu clicks
       const dropdown = document.querySelector(".dropdown-menu");
       dropdown.classList.toggle(".visible");
-      if (event.target.closest("[data-action]")) {
-        const action = event.target
+      if (e.target.closest("[data-action]")) {
+        const action = e.target
           .closest("[data-action]")
           .getAttribute("data-action");
         if (action === "toggleFont") {
