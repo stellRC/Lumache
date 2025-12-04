@@ -44,7 +44,6 @@ This avoids Python version mismatching if newer sphinx themes and dependencies a
             python-version: "3.14"
     - name: Install dependencies and build docs
         run: |
-            pip install --upgrade pip
             pip install -r ./docs/requirements.txt
             sphinx-build docs/source docs/build/html
 
