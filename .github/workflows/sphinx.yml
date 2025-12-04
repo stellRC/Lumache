@@ -19,8 +19,7 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r ./docs/requirements.txt
-          pip install sphinx
-          sphinx-build docs/source docs/build/html
+          # sphinx-build docs/source docs/build/html
       - name: Build HTML
         uses: ammaraskar/sphinx-action@master
         with:
