@@ -3,7 +3,10 @@
   /* transform: scale(1.1); */
   width: 1.25rem;
   height: 1.25rem;
+}
+#AcccessibilityMenu .dropdown-toggle svg path {
   stroke: var(--color-foreground-primary);
+  fill: var(--color-foreground-primary);
   opacity: 0.8;
 }
 
