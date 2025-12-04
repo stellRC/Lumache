@@ -2,7 +2,7 @@ AccessibilitySVG = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.or
 <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="var(--pst-color-text-muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M7 9L12 10M17 9L12 10M12 10V13M12 13L10 18M12 13L14 18" stroke="var(--pst-color-text-muted)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 7C11.7239 7 11.5 6.77614 11.5 6.5C11.5 6.22386 11.7239 6 12 6C12.2761 6 12.5 6.22386 12.5 6.5C12.5 6.77614 12.2761 7 12 7Z" fill="var(--pst-color-text-muted)" stroke="var(--pst-color-text-muted)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>`
+</svg>`;
 FontSVG = `<svg fill="var(--pst-color-text-muted)" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 392.619 392.619" xml:space="preserve">
 <g>
@@ -23,7 +23,7 @@ FontSVG = `<svg fill="var(--pst-color-text-muted)" version="1.1" id="Capa_1" xml
 	<path d="M306.783,174.973c-3.865-3.865-10.474-1.128-10.474,4.338v37.866c0,5.466,6.609,8.203,10.474,4.338l18.933-18.933
 		c2.396-2.396,2.396-6.281,0-8.677L306.783,174.973z"/>
 </g>
-</svg>`
+</svg>`;
 ContrastSVG = `<svg fill="var(--pst-color-text-muted)" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 211 211" xml:space="preserve">
 <g>
@@ -42,13 +42,13 @@ ContrastSVG = `<svg fill="var(--pst-color-text-muted)" version="1.1" id="Capa_1"
 </svg>`;
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Create the menu
-    const headerEnd = document.querySelector(".article-header-buttons");
-    if (headerEnd) {
-        const button = document.createElement("div");
-        button.id = "AcccessibilityMenu";
-        button.className = "dropdown";
-        button.innerHTML = `<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  // Create the menu
+  const headerEnd = document.querySelector(".content-icon-container");
+  if (headerEnd) {
+    const button = document.createElement("div");
+    button.id = "AcccessibilityMenu";
+    button.className = "dropdown";
+    button.innerHTML = `<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         ${AccessibilitySVG}
                     </button>
                     <ul class="dropdown-menu">
@@ -66,102 +66,112 @@ document.addEventListener("DOMContentLoaded", () => {
                         </a></li>
                     </ul>`;
 
-        headerEnd.prepend(button);
-    }
-    // Load saved font and contrast preference next
-    loadFontPreference();
-    loadContrastPreference();
+    headerEnd.prepend(button);
+  }
+  // Load saved font and contrast preference next
+  loadFontPreference();
+  loadContrastPreference();
 
-    // Add event listeners
-    document.getElementById("AcccessibilityMenu")?.addEventListener("click", (event) => {
-        // Handle dropdown menu clicks
-        if (event.target.closest('[data-action]')) {
-            const action = event.target.closest('[data-action]').getAttribute('data-action');
-            if (action === 'toggleFont') {
-                toggleFont();
-            } else if (action === 'toggleContrast') {
-                toggleContrast();
-            }
-            event.preventDefault();
-            return;
+  // Add event listeners
+  document
+    .getElementById("AcccessibilityMenu")
+    ?.addEventListener("click", (event) => {
+      // Handle dropdown menu clicks
+      if (event.target.closest("[data-action]")) {
+        const action = event.target
+          .closest("[data-action]")
+          .getAttribute("data-action");
+        if (action === "toggleFont") {
+          toggleFont();
+        } else if (action === "toggleContrast") {
+          toggleContrast();
         }
+        event.preventDefault();
+        return;
+      }
     });
 });
 
 function toggleFont() {
-    const body = document.body;
-    body.classList.toggle("dyslexic");
-    const fontText = document.getElementById("fontText");
-    
-    // Save font preference to localStorage
-    const isDyslexicEnabled = body.classList.contains("dyslexic");
-    localStorage.setItem("accessibility-font", isDyslexicEnabled ? "dyslexic" : "default");
-    
-    // Update button text
-    if (isDyslexicEnabled) {
-        fontText.innerHTML = `${disableFont} <span style="font-family: OpenDyslexic">OpenDyslexic</span>`;
-    } else {
-        fontText.innerHTML = `${enableFont} <span style="font-family: OpenDyslexic">OpenDyslexic</span>`;
-    }
+  const body = document.body;
+  body.classList.toggle("dyslexic");
+  const fontText = document.getElementById("fontText");
+
+  // Save font preference to localStorage
+  const isDyslexicEnabled = body.classList.contains("dyslexic");
+  localStorage.setItem(
+    "accessibility-font",
+    isDyslexicEnabled ? "dyslexic" : "default"
+  );
+
+  // Update button text
+  if (isDyslexicEnabled) {
+    fontText.innerHTML = `${disableFont} <span style="font-family: OpenDyslexic">OpenDyslexic</span>`;
+  } else {
+    fontText.innerHTML = `${enableFont} <span style="font-family: OpenDyslexic">OpenDyslexic</span>`;
+  }
 }
 
 function toggleContrast() {
-    const body = document.body;
-    body.classList.toggle("high-contrast");
-    const contrastText = document.getElementById("contrastText");
+  const body = document.body;
+  body.classList.toggle("high-contrast");
+  const contrastText = document.getElementById("contrastText");
 
-    // Save contrast preference to localStorage
-    const isHighContrastEnabled = body.classList.contains("high-contrast");
-    localStorage.setItem("accessibility-contrast", isHighContrastEnabled ? "enabled" : "disabled");
+  // Save contrast preference to localStorage
+  const isHighContrastEnabled = body.classList.contains("high-contrast");
+  localStorage.setItem(
+    "accessibility-contrast",
+    isHighContrastEnabled ? "enabled" : "disabled"
+  );
 
-    // Update button text
-    if (isHighContrastEnabled) {
-        contrastText.innerHTML = disableContrast;
-    } else {
-        contrastText.innerHTML = enableContrast;
-    }
+  // Update button text
+  if (isHighContrastEnabled) {
+    contrastText.innerHTML = disableContrast;
+  } else {
+    contrastText.innerHTML = enableContrast;
+  }
 }
 
 // Load saved font preference on page load
 function loadFontPreference() {
-    const savedFont = localStorage.getItem("accessibility-font");
-    const body = document.body;
-    const fontText = document.getElementById("fontText");
-    
-    if (savedFont === "dyslexic") {
-        body.classList.add("dyslexic");
-        // Update button text if it exists
-        if (fontText) {
-            fontText.innerHTML = `${disableFont} <span style="font-family: OpenDyslexic">OpenDyslexic</span>`;
-        }
-    } else {
-        // Handle default case (either "default" or null/undefined)
-        body.classList.remove("dyslexic");
-        // Update button text if it exists
-        if (fontText) {
-            fontText.innerHTML = `${enableFont} <span style="font-family: OpenDyslexic">OpenDyslexic</span>`;
-        }
+  const savedFont = localStorage.getItem("accessibility-font");
+  const body = document.body;
+  const fontText = document.getElementById("fontText");
+
+  if (savedFont === "dyslexic") {
+    body.classList.add("dyslexic");
+    // Update button text if it exists
+    if (fontText) {
+      fontText.innerHTML = `${disableFont} <span style="font-family: OpenDyslexic">OpenDyslexic</span>`;
     }
+  } else {
+    // Handle default case (either "default" or null/undefined)
+    body.classList.remove("dyslexic");
+    // Update button text if it exists
+    if (fontText) {
+      fontText.innerHTML = `${enableFont} <span style="font-family: OpenDyslexic">OpenDyslexic</span>`;
+    }
+  }
 }
 
 // Load saved contrast preference on page load
 function loadContrastPreference() {
-    const savedContrast = localStorage.getItem("accessibility-contrast");
-    const body = document.body;
-    const contrastText = document.getElementById("contrastText");
+  const savedContrast = localStorage.getItem("accessibility-contrast");
+  const body = document.body;
+  const contrastText = document.getElementById("contrastText");
 
-    if (savedContrast === "enabled") {
-        body.classList.add("high-contrast");
-        // Update button text if it exists
-        if (contrastText) {
-            contrastText.innerHTML = disableContrast;
-        }
-    } else {
-        // Handle default case (either "default" or null/undefined)
-        body.classList.remove("high-contrast");
-        // Update button text if it exists
-        if (contrastText) {
-            contrastText.innerHTML = enableContrast;
-        }
+  if (savedContrast === "enabled") {
+    body.classList.add("high-contrast");
+    // Update button text if it exists
+    if (contrastText) {
+      contrastText.innerHTML = disableContrast;
     }
+  } else {
+    // Handle default case (either "default" or null/undefined)
+    body.classList.remove("high-contrast");
+    // Update button text if it exists
+    if (contrastText) {
+      contrastText.innerHTML = enableContrast;
+    }
+  }
 }

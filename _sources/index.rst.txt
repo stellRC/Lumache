@@ -1,4 +1,7 @@
 
+.. raw:: html
+
+   <div class="article-header-buttons"></div>
 
 Welcome to Lumache's documentation!
 ===================================
@@ -12,10 +15,6 @@ Facts database <https://world.openfoodfacts.org/>`_ and offers a *simple* and
 
 Check out the :doc:`usage` section for further information, including how to
 :ref:`install <installation>` the project.
-
-.. raw:: html
-
-   <div class="article-header-buttons"></div>
 
 .. note::
 
