@@ -21,14 +21,13 @@ Then install the requirements for the theme via the command line:
 
 Ensure versions of python and pip are up-to-date. 
 If the venv (virtual environment) is built in an earlier version,
-this might cause a version mismatch and a failure to activate the variables
-
-.. callout:: ①
+this might cause a version mismatch and a failure to activate the variables::
+    
     python3.14.1 -m venv venv
     py -m venv .venv
     .venv\Scripts\activate
 
-Specify Python build version in `sphinx.yml` rather than using `sphinx-action`
+Specify Python build version in ``sphinx.yml`` rather than using ``sphinx-action``
 This avoids Python version mismatching if newer sphinx themes and dependencies are used.
 
 .. annotations::
