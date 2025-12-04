@@ -68,3 +68,10 @@ the dependency should be added to the ``conf.py`` file.
     pygments_style = "a11y-light"
     pygments_dark_style = "a11y-dark"
 
+TODO
+=======
+Live code execution C++
+- Breathe: Installed via pip, not yet extended
+- Doxygen: Not installed
+
+
