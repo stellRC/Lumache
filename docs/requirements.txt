@@ -1,1 +1,2 @@
 furo==2025.9.25
+sphinx-accessibility
