@@ -2,7 +2,7 @@
 
 Welcome to Lumache's documentation!
 ===================================
-.. container:: article-header-buttons
+
    
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers that
@@ -12,6 +12,10 @@ Facts database <https://world.openfoodfacts.org/>`_ and offers a *simple* and
 
 Check out the :doc:`usage` section for further information, including how to
 :ref:`install <installation>` the project.
+
+.. raw:: html
+
+   <div class="article-header-buttons"></div>
 
 .. note::
 
