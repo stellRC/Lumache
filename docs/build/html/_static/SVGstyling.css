@@ -5,16 +5,28 @@
 
 /* Hover effects for accessibility menu SVG icons */
 #AcccessibilityMenu .btn:hover svg path {
-  stroke: var(--pst-color-text-base) !important;
+  stroke: var(--color-foreground-primary) !important;
   /* fill: var(--pst-color-text-base) !important; */
 }
 
 /* Hover effects for dropdown items */
 #AcccessibilityMenu .dropdown-item:hover svg path {
-  stroke: var(--pst-color-text-base) !important;
-  fill: var(--pst-color-text-base) !important;
+  stroke: var(--color-foreground-primary) !important;
+  fill: var(--color-foreground-primary) !important;
 }
 
 #AcccessibilityMenu .dropdown-item:hover svg {
-  fill: var(--pst-color-text-base) !important;
+  fill: var(--color-foreground-primary) !important;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 5rem;
+}
+
+.btn_text-container {
+  display: none;
 }

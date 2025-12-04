@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add event listeners
   document
     .getElementById("AcccessibilityMenu")
-    ?.addEventListener("click", (event) => {
+    ?.addEventListener("click", (e) => {
       // Handle dropdown menu clicks
       if (event.target.closest("[data-action]")) {
         const action = event.target
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (action === "toggleContrast") {
           toggleContrast();
         }
-        event.preventDefault();
+        e.preventDefault();
         return;
       }
     });
