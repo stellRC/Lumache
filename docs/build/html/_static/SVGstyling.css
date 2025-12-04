@@ -4,9 +4,7 @@
   width: 1.25rem;
   height: 1.25rem;
   stroke: var(--color-foreground-primary);
-  background-color: transparent;
-  outline: none;
-  border: none;
+  opacity: 0.8;
 }
 
 .dropdown-toggle {
@@ -63,7 +61,7 @@
   height: 1.25rem;
   stroke: var(--color-foreground-primary);
   fill: var(--color-foreground-primary);
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .visible {
